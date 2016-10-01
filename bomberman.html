@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BOMBERMAN</title>
+  </head>
+  <body>
+    
+    <!--<script type="text/javascript" src="./bomberman.js"></script>-->
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+      var socketio = io.connect('https://socket-practice-harayo.c9users.io');
+      function send() {
+        socketio.emit("message", "hello world");
+      }
+    socketio.on("message", function (data) {
+          console.log(data);
+      });
+      socketio.on('connect', function () {
+        send();
+        console.log("called");
+      });
+    </script>
+
+      <!--socket.on('enter', function(name) {-->
+      <!--  io.socket.emit('enter', {name:""});-->
+      <!--  console.log(enter);-->
+      <!--})-->
+      
+      <!--socket.on('message', function(data) {-->
+      <!--  io.socket.emit('message',data);-->
+      <!--  console.log(message);-->
+      <!--})-->
+      
+      <!--io.socket.emit('enter');-->
+      
+    </script>>
+    
+  </body>
+</html>
