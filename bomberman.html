@@ -7,8 +7,8 @@
   <body>
     <script src='https://cdn.socket.io/socket.io-1.4.5.js'></script>
     <script type='text/javascript'>
-      console.log('hello');
       var socketio = io.connect('https://socket-practice-harayo.c9users.io');
+      
       function send() {
         socketio.emit('message', 'welcome to BOMBERMAN');   //入室した情報を送る
       }
@@ -21,14 +21,8 @@
       });
     </script>
 
-      <!--socket.on('enter', function(name) {-->
-      <!--  io.socket.emit('enter', {name:''});-->
+      <!--socket.on('enter', function(name) {<-->
       <!--  console.log(enter);-->
-      <!--})-->
-      
-      <!--socket.on('message', function(data) {-->
-      <!--  io.socket.emit('message',data);-->
-      <!--  console.log(message);-->
       <!--})-->
       
       <!--io.socket.emit('enter');-->
